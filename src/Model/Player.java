@@ -1,9 +1,13 @@
 package Model;
 
+import java.util.HashMap;
+
 /**
  * Created by fragg on 12/8/2016.
  */
 public class Player {
+    private HashMap<Character, Deployment> deploment = new HashMap<Character, Deployment>();
+    private int soliderQueue = 0;
     private String name;
     private String id;
     public Player(String name, String id){
@@ -12,5 +16,8 @@ public class Player {
     }
     public String getId(){
         return id;
+    }
+    public void addSoliders(int x){
+        soliderQueue += x;
     }
 }

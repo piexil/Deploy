@@ -38,5 +38,8 @@ public class DDmodel implements ViewListener{
             }
         }
     }
+    public Player getPlayer(){
+        return player;
+    }
 
 }

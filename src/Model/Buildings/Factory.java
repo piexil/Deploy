@@ -14,10 +14,9 @@ public class Factory extends Building{
     }
     @Override
     public void executeTurn(){
-        if(turnTimer > ranks[rank]){
+        if(turnTimer++ > ranks[rank]){
             turnTimer = 0;
-            dDmodel.getPlayer().addSolider(ranks[rank]);
-            turnTimer++;
+            dDmodel.getPlayer().addSoliders(ranks[rank]);
         }
     }
 }
